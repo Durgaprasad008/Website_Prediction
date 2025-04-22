@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phishing Prediction</title>
+</head>
+<body>
+    <h1>Enter Website Features</h1>
+    <form method="post">
+        {% for feature in selected_features %}
+            <label>{{ feature.replace('_', ' ').title() }}:</label><br />
+            <input type="number" step="any" name="{{ feature }}" required><br /><br />
+        {% endfor %}
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
